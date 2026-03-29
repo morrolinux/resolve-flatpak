@@ -19,9 +19,16 @@ By default, com.blackmagic.Resolve.yaml is configured to package the latest vers
 
 3. Build your package, and export to a distributable single file installer:
 
+#### Pre-requisites
+
+```
+rpm-ostree install flatpak-builder
+flatpak --user install flathub org.freedesktop.Sdk//25.08
+```
+
 #### Free
 ```
-flatpak-builder --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.Resolve.yaml
+flatpak-builder --user --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.Resolve.yaml
 ```
 
 To simply install the built version:
@@ -37,7 +44,7 @@ flatpak build-bundle .repo resolve.flatpak com.blackmagic.Resolve --runtime-repo
 
 #### Studio
 ```
-flatpak-builder --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.ResolveStudio.yaml
+flatpak-builder --user --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.ResolveStudio.yaml
 ```
 
 To simply install the built version:
