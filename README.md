@@ -28,7 +28,7 @@ flatpak --user install flathub org.freedesktop.Sdk//25.08
 
 #### Free
 ```
-flatpak-builder --user --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.Resolve.yaml
+flatpak-builder --user --install-deps-from=flathub --force-clean --disable-cache --repo=.repo .build-dir com.blackmagic.Resolve.yaml
 ```
 
 To simply install the built version:
@@ -44,7 +44,7 @@ flatpak build-bundle .repo resolve.flatpak com.blackmagic.Resolve --runtime-repo
 
 #### Studio
 ```
-flatpak-builder --user --install-deps-from=flathub --force-clean --repo=.repo .build-dir com.blackmagic.ResolveStudio.yaml
+flatpak-builder --user --install-deps-from=flathub --force-clean --disable-cache --repo=.repo .build-dir com.blackmagic.ResolveStudio.yaml
 ```
 
 To simply install the built version:
